@@ -59,7 +59,7 @@ Widget maincontainer(BuildContext context, lst) {
             ),
             Text(
               lst[0],
-              style: TextStyle(color: Colors.blue),
+              style: TextStyle(color: Colors.white),
             ),
             Text(
               lst[1],
