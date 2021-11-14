@@ -1,3 +1,4 @@
+import 'package:coffee/home.dart';
 import 'package:coffee/splash1.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: splash1());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Home());
   }
 }

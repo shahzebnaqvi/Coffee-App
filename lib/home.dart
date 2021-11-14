@@ -12,16 +12,21 @@ class Home extends StatelessWidget {
       ),
       drawer: drawer(),
       body: SingleChildScrollView(
-        child: Container(
-          child: Expanded(
-            child: ListView.builder(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('Hey'),
+            ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
-                shrinkWrap: false,
-                itemCount: 3,
+                shrinkWrap: true,
+                itemCount: 18,
                 itemBuilder: (context, index) {
-                  return Text("data");
-                }),
-          ),
+                  return Wrap(children: [
+                    maincontainer(context),
+                    maincontainer(context)
+                  ]);
+                })
+          ],
         ),
       ),
     );
@@ -39,7 +44,7 @@ Widget maincontainer(BuildContext context) {
         padding: EdgeInsets.all(10),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text("Expresso"),
-          Text("data"),
+          Text("e"),
           Image(image: AssetImage("assets/images/1.jpg")),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
