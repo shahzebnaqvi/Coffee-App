@@ -13,14 +13,16 @@ class Home extends StatelessWidget {
       drawer: drawer(),
       body: SingleChildScrollView(
         child: Container(
-            child: Wrap(children: [
-          maincontainer(context),
-          maincontainer(context),
-          maincontainer(context),
-          maincontainer(context),
-          maincontainer(context),
-          maincontainer(context),
-        ])),
+          child: Expanded(
+            child: ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: false,
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                  return Text("data");
+                }),
+          ),
+        ),
       ),
     );
   }
@@ -29,9 +31,9 @@ class Home extends StatelessWidget {
 Widget maincontainer(BuildContext context) {
   return Container(
     margin: EdgeInsets.all(
-      MediaQuery.of(context).size.width * 0.050,
+      MediaQuery.of(context).size.width * 0.005,
     ),
-    width: MediaQuery.of(context).size.width * 0.50,
+    width: MediaQuery.of(context).size.width * 0.48,
     child: Card(
       child: Container(
         padding: EdgeInsets.all(10),
