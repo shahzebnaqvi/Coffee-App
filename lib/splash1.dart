@@ -42,9 +42,7 @@ Widget maincontainer(BuildContext context, lst) {
           image: DecorationImage(
               colorFilter: ColorFilter.mode(
                   Colors.black.withOpacity(0.8), BlendMode.dstATop),
-              image: AssetImage(
-                "assets/splash1.jpg",
-              ),
+              image: AssetImage("assets/images/1.jpg"),
               fit: BoxFit.cover),
         ),
         child: Column(

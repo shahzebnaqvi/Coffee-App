@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:coffee/splash3.dart';
 import 'package:flutter/material.dart';
 
 class splash2 extends StatefulWidget {
@@ -21,7 +22,7 @@ class _splash2State extends State<splash2> {
     Timer(
         Duration(seconds: 5),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => splash2())));
+            context, MaterialPageRoute(builder: (context) => splash3())));
   }
 
   @override
@@ -41,9 +42,7 @@ Widget maincontainer(BuildContext context, lst) {
           image: DecorationImage(
               colorFilter: ColorFilter.mode(
                   Colors.black.withOpacity(0.8), BlendMode.dstATop),
-              image: AssetImage(
-                "assets/splash2.jpg",
-              ),
+              image: AssetImage("assets/images/2.jpg"),
               fit: BoxFit.cover),
         ),
         child: Column(
